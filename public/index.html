@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Simon</title>
+	<meta charset="utf-8">
+	<style type = 'text/css'>
+		.box1 {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		.box2 {
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+		}
+		.box3 {
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+		.box4 {
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+		}
+								
+	</style>
+
+</head>
+<body>
+<div>
+	<div></div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<button>Start Game</button>
+<p>Score: <span id='score'>0</span></p>
+
+	<div class='box1'></div>
+	<div class='box2'></div>
+	<div class='box3'></div>
+	<div class='box4'></div>
+
+	<script type='text/javascript'>
+			var box = $('.box')
+
+			box.animate({
+				'width': '75px',
+				'height': '100px'
+			}, 3000), function() {
+				console.log('done');
+
+			}box.animate({
+				'width': '20px'
+			}, 2000);
+
+		setTimeout
+	</script>
+</body>
+</html>
