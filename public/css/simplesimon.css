@@ -1,14 +1,13 @@
 
 h3 {
-	margin-left: 138px;
-    font-size: xx-large;
+    font-size: 79px;
     font-weight: bolder;
     color: rgba(223, 255, 0, 0.93);
 }
 
-#start {
-	margin-left: 200px;
-	margin-top: 25px;
+#start, #stop {
+	margin-left: 239px;
+	margin-top: 17px;
 }
 
 /*.col-xs-12 {
@@ -23,34 +22,42 @@ h3 {
 	width: 175px;
 	height: 175px;
 	background-color: black;
-	left: 106px;
+	/*left: 106px;
+	top: 173px;*/
+	left: 0;
+	top: 0;
+	opacity: .3;
 }
 #box2 {
 	position: absolute;
 	width: 175px;
 	height: 175px;
 	background-color: black;
-	left: 287px;
+	right: 0;
+	top: 0;
+	opacity: .3;
 }
 #box3 {
 	position: absolute;
 	width: 175px;
 	height: 175px;
 	background-color: black;
-	left: 106px;
-	top: 325px;
+	left: 0;
+	bottom: 0;
+	opacity: .3;
 }
 #box4 {
 	position: absolute;
 	width: 175px;
 	height: 175px;
 	background-color: black;
-	left: 287px;
-	top: 325px;
+	right: 0;
+	bottom: 0;
+	opacity: .3;
 }
 
 p {
-	margin-left: 216px;
+	margin-left: 259px;
 }
 
 img {
@@ -70,4 +77,11 @@ img {
 .stretch {
     width: 1281px;
    	height: 623px;
+}
+
+#container {
+	height: 355px;
+	width: 355px;
+	position: relative;
+	margin-left: 112px;
 }

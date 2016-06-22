@@ -5,9 +5,8 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/simplesimon.css">
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script type='js/simplesimon.js'></script>
+	
+
 </head>
 <body>
 	<div id="background">
@@ -15,68 +14,52 @@
 	</div>
 
 
-<h3>The Simpsons Says</h3>
+<h3 class="text-center">Simple Simpsons</h3>
 
 	
 
 	<button id='start'>Start Game</button>
-	<p>Score: <span id='score'>0</span></p>
-<!-- <div class='col-xs-12'> -->
-	<div class="row1">
-	  <div class="col-md-6" id='box1'><img src='img/duffbeer.jpg'></div>
+	<p>Score: <span class='text-center' id='score'>0</span></p>
+	<p>Round: <span class='text-center' id='round'>0</span></p>
+	<button id='stop'>Stop Game</button>
+
+<div id='container'>
+	<div class="row">
+	  <div class="col-md-6" id='box1' data value='1'><img src='img/duffbeer.jpg'></div>
+	  <div class="col-md-6" id='box2' data value='2'><img src='img/bart2.jpg'></div>
 	</div>
-	<div class="row2">
-	  <div class="col-md-6" id='box2'><img src='img/marge.jpg'></div>
+	<div class="row">
+	  <div class="col-md-6" id='box3' data value='3'><img src='img/homer-excited.jpg'></div>
+	  <div class="col-md-6" id='box4' data value='4'><img src='img/barney.jpg'></div>
 	</div>
-	<div class="row3">
-	  <div class="col-md-6" id='box3'><img src='img/homer-excited.jpg'></div>
-	</div>
-	<div class="row4">
-	  <div class="col-md-6" id='box4'><img src='img/barney.jpg'></div>
-	</div>
-<!-- </div> -->
-	<script>
-	'use strict'
-	$(document).ready(function() {
-			$('.row1').click(function(){
-				console.log('im clicking');
-				$('#box1').animate({
-					opacity: '0'
-				}, 150).animate({
-					opacity: '1'
-				})
-			})
-		$(document).ready(function() {
-			$('.row2').click(function(){
-				console.log('im clicking');
-				$('#box2').animate({
-					opacity: '0'
-				}, 150).animate({
-					opacity: '1'
-				})
-			})
-		})
-		$(document).ready(function() {
-			$('.row3').click(function(){
-				console.log('im clicking');
-				$('#box3').animate({
-					opacity: '0'
-				}, 150).animate({
-					opacity: '1'
-				})
-			})
-		})
-		$(document).ready(function() {
-			$('.row4').click(function(){
-				console.log('im clicking');
-				$('#box4').animate({
-					opacity: '0'
-				}, 150).animate({
-					opacity: '1'
-				})
-			})
-		})							
-	}); 
-	</script>
+</div>
+	<audio id="beer" preload="auto">
+    	<source src="wav/beercanopen.wav">
+	</audio>
+			
+
+	<audio id="bart" preload="auto">
+    	<source src="http://www.richmolnar.com/Sounds/Bart%20-%20Aye%20Carumba.wav">
+	</audio>
+			
+			
+	<audio id="homer" preload="auto">
+    	<source src="http://www.richmolnar.com/Sounds/Homer%20-%20D'oh!%20(1).wav">
+	</audio>
+		
+
+	<audio id="barney" preload="auto">
+    	<source src="http://www.richmolnar.com/Sounds/Barney%20-%20Burp.wav">
+	</audio>
+		
+
+
+
+			
+
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>	
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src='js/simplesimon.js'></script>
 </body>
 </html>
