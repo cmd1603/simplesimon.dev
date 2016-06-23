@@ -21,7 +21,8 @@
 
 		function addRandomBoxToSequence() {
 			var random = Math.floor(Math.random() * 4);
-			gameSequence.push(boxes[random].class);
+			gameSequence.push(boxes.get(random).id);
+			console.log(gameSequence);
 		}
 
 		function playback() {
@@ -48,12 +49,14 @@
 			}, 1000);
 		}	
 
-	    function lightUp(element) {
-	            //element.style.opacity = "1";
-	            var fadeoutTimerId = setTimeout(function() {
-	                //element.style.opacity = "0.3";
-	            }, 100);
-	        
+////////////FIND A WAY TO MAKE THIS BELOW WORK WITH ALL THE FUNCTIONS BELOW/////////////////////
+        function lightUp(element) {
+            element.style.opacity = "1";
+            var fadeoutTimerId = setTimeout(function() {
+                element.style.opacity = "0.3";
+            }, 150);
+        }	
+
 			$(document).ready(function() {
 					$('#box1').click(function(){
 						// console.log('im clicking');
@@ -98,13 +101,13 @@
 					})
 				})							
 			})
-		}
-
+		
+	
 
         function compareSequences() {
 	            var sequenceError = false;
-	            // loop through the input sequence and perform the following:
-	            // check if the game sequence and input sequence match for a given offset
+	            // loop through the user sequence and perform the following:
+	            // check if the game sequence and user sequence match for a given offset
 	            // if they don't match, set your error status variable to true and get out of the loop
 	            for (var i = 0; i < userSequence.length; i++) {
 	              if (gameSequence[i] == undefined || gameSequence[i] != userSequence[i]) {
@@ -114,8 +117,8 @@
 	            }
 	           // check if there is an error
 	            // if there is, call gameOver()
-	            // otherwise, check if the input sequence is the same length as the game sequence
-		            // if it is, the user has completed the sequence, so clear the input sequence and call simonMove()
+	            // otherwise, check if the user sequence is the same length as the game sequence
+		            // if it is, the user has completed the sequence, so clear the user sequence and call goSimon()
 		    if (sequenceError) {
 		              gameOver();
 		        } else if (userSequence.length == gameSequence.length) {
@@ -126,7 +129,7 @@
         function gameOver() {
             // hard reload the page.
             location.reload(true);
-            confirm("Game over. Play again?");
+            confirm("LOSERR! Play again???");
             if(confirm) {
                 start();
             }
@@ -144,13 +147,13 @@
         }
 
 
-		function beginInput () {
+		function beginInput() {
 			document.getElementById('box1').addEventListener('click',userClick, false);
 			document.getElementById('box2').addEventListener('click',userClick, false);
 			document.getElementById('box3').addEventListener('click',userClick, false);
 			document.getElementById('box4').addEventListener('click',userClick, false);
 		}
-		function endInput () {
+		function endInput() {
 			document.getElementById('box1').removeEventListener('click',userClick, false);
 			document.getElementById('box2').removeEventListener('click',userClick, false);
 			document.getElementById('box3').removeEventListener('click',userClick, false);
